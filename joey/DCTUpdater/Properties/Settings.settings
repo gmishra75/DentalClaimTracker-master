@@ -1,0 +1,27 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DCTUpdater.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="UpdateFileName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DentalClaimTracker.exe</Value>
+    </Setting>
+    <Setting Name="UpdateFileRemoteLocation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">dct/exe/</Value>
+    </Setting>
+    <Setting Name="FTPServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">www.twinsparks.com</Value>
+    </Setting>
+    <Setting Name="FTPUserName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">theteamcs</Value>
+    </Setting>
+    <Setting Name="FTPPassword" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SpeedBay59</Value>
+    </Setting>
+    <Setting Name="RemoteDeploymentManifest" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://twinsparks.com/dct/exe/DeploymentManifest.XML</Value>
+    </Setting>
+    <Setting Name="FTPRootUri" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ftp://twinsparks.com/dct/exe/</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

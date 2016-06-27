@@ -1,0 +1,231 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:Claims_Primary="clr-namespace:C_DentalClaimTracker.Claims_Primary" x:Class="C_DentalClaimTracker.General.frmStartScreenWPF" 
+             mc:Ignorable="d" 
+             d:DesignHeight="766" d:DesignWidth="1024">
+    <UserControl.Resources>
+        <BitmapImage x:Key="SettingsImage" UriSource="/Images\fatcow-hosting-icons-900\16x16\group_gear.png" />
+        <BitmapImage x:Key="SearchImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\arrow_rotate_clockwise.png" />
+        <BitmapImage x:Key="ResolveNowImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\exclamation.png" />
+        <BitmapImage x:Key="ProcessImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\layers.png" />
+        <BitmapImage x:Key="ResolveImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\application_side_list.png" />
+        <BitmapImage x:Key="ImportImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\database_link.png" />
+        <BitmapImage x:Key="QuickSearchImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\page_white_magnify.png" />
+        <BitmapImage x:Key="FullSearchImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\application_form_magnify.png" />
+        <BitmapImage x:Key="AdvancedImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\brick.png" />
+        <BitmapImage x:Key="MainImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\brick.png" />
+        <BitmapImage x:Key="ReportImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\report.png" />
+        
+
+        <!-- Color Guide 
+            PURPLE A200FF
+            MAGENTA FF0097
+            TEAL 00ABA9
+            LIME 8CBF26
+            BROWN A05000
+            PINK E671B8
+            ORANGE F09609
+            BLUE 1BA1E2
+            RED E51400
+            GREEN 339933        
+        -->
+
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="4" />
+            <Setter Property="BorderThickness" Value="0" />
+            <Setter Property="Height" Value="100" />
+            <Setter Property="Width" Value="200" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="Foreground" Value="White" />
+        </Style>
+    </UserControl.Resources>
+    
+    <Grid>
+        <DockPanel Width="1024" Height="766" Background="White">
+            <DockPanel HorizontalAlignment="Left" Height="51" VerticalAlignment="Top" Width="1024" LastChildFill="True" DockPanel.Dock="Top">
+                <Button x:Name="btnSettings" Margin="0" VerticalAlignment="Top" Background="#339933" Foreground="White" BorderThickness="0"
+                        Height="51" HorizontalAlignment="Left" Width="106" FontSize="16" Click="btnSettings_Click" DockPanel.Dock="Right">
+                    
+                    <StackPanel>
+                        <Image Source="{StaticResource SettingsImage}" Width="16" Height="16" />
+                        <TextBlock Text="My Settings" />
+                    </StackPanel>
+                </Button>
+                <Label VerticalAlignment="Top" Visibility="Visible" FontWeight="SemiBold" HorizontalContentAlignment="Left" FontSize="20" Background="#252525"
+                       Foreground="White" BorderThickness="0" BorderBrush="Black" Height="52" VerticalContentAlignment="Center">
+                    
+                    <WrapPanel>
+                        <Image Source="{StaticResource MainImage}" Width="32" Height="32" />
+                        <TextBlock Margin="10, 0, 0, 0" FontFamily="Palatino Linotype">ClaimTracker</TextBlock>
+                    </WrapPanel>
+                </Label>
+            </DockPanel>
+            
+            <DockPanel HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="1024" LastChildFill="True" DockPanel.Dock="Top" Background="White">
+                <Label Content="Today's Work" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontSize="20" 
+                       Foreground="Black" FontWeight="SemiBold" Height="44" VerticalContentAlignment="Bottom" Padding="10, 0, 0, 0"/>
+            </DockPanel>
+            
+            <DockPanel Width="1024" DockPanel.Dock="Top" LastChildFill="True">
+                <StackPanel Width="153" HorizontalAlignment="Right" DockPanel.Dock="Right" Margin="0" Background="White" >
+                    <Border BorderBrush="Black" Background="#FFFFFF" BorderThickness="2" Padding="0" Margin="0,0,0,0">
+                        <StackPanel Margin="0, 0, 0, 0" Name="pnlOffices">
+                            <Label Name="lblOffices" Content="Offices " VerticalAlignment="Top" Visibility="Visible" HorizontalContentAlignment="Right" FontSize="14" Foreground="White" FontWeight="SemiBold" 
+                                   BorderThickness="0" BorderBrush="Black" Background="#252525" Height="22" VerticalContentAlignment="Center" Padding="10, 0, 0, 0"/>
+                            
+                        </StackPanel>
+                        
+                    </Border>
+                    <Border BorderBrush="Black" Background="#FFFFFF" BorderThickness="2" Padding="0" Margin="0,0,0,0">
+                    <StackPanel Margin="0, 0, 0, 0">
+                        <Label Name="lblReportDate" Content="Reports " VerticalAlignment="Top" Visibility="Visible" HorizontalContentAlignment="Right" FontSize="14" Foreground="White" FontWeight="SemiBold" 
+                                   BorderThickness="0" BorderBrush="Black" Background="#252525" Height="22" VerticalContentAlignment="Center" Padding="10, 0, 0, 0"/>
+                        <WrapPanel HorizontalAlignment="Right" ItemHeight="30" Margin="0, 0, 6, 0" Width="147">
+                            <Label Content="Minimum Days " VerticalAlignment="Center" Visibility="Visible" HorizontalContentAlignment="Right" FontSize="14" Width="120" />
+                                <TextBox Name="txtMinimumDays"  VerticalAlignment="Center" FontSize="16" Width="27" Text="30" PreviewTextInput="txtMinimumDays_PreviewTextInput" TextChanged="txtMinimumDays_TextChanged"></TextBox>
+                            </WrapPanel>
+                    </StackPanel>
+                    </Border>
+                </StackPanel>
+
+                <WrapPanel DockPanel.Dock="Top" Background="White">
+                    <Button x:Name="btnResolveNow" Background="#1BA1E2" Click="btnResolveNowClaims_Click">
+                        <StackPanel>
+                            <Image Source="{StaticResource ResourceKey=ResolveNowImage}" Width="32" />
+                            <TextBlock Text="Urgent Claims" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                            <TextBlock Name="txtResolveNow" Text="(755)" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnUnpaidClaims" Background="#1BA1E2" Click="btnUnpaidClaims_Click">
+                        <StackPanel>
+                            <Image Source="{StaticResource ResourceKey=ResolveImage}" Width="32" />
+                            <TextBlock Text="Priority Report" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                            <TextBlock Name="txtUnpaidClaims" FontWeight="SemiBold" Text="(755)" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    
+                    <Button x:Name="btnPredeterms" Background="#1BA1E2" Click="btnPredeterms_Click">
+                        <StackPanel>
+                            <TextBlock Text="Open Predeterms" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                            <TextBlock Name="txtOpenPredeterms" Text="(155)" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center" FontWeight="SemiBold"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnProcessClaims" Background="#00ABA9" Click="btnProcessClaims_Click">
+                        <StackPanel>
+                            <Image Source="{StaticResource ResourceKey=ProcessImage}" Width="32" />
+                            <TextBlock Text="Process Claims" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                            <TextBlock Name="txtProcessClaims" FontWeight="SemiBold" Text="(150)" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                </WrapPanel>
+
+                <DockPanel HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="1024" LastChildFill="True" DockPanel.Dock="Top">
+                    <Label Content="Specialty Work" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontSize="20" Foreground="Black"
+                           FontWeight="SemiBold" Height="44" VerticalContentAlignment="Bottom" Padding="10, 0, 0, 0"/>
+                </DockPanel>
+
+                <WrapPanel DockPanel.Dock="Top">
+                    <Button x:Name="btnQuickSearch" Background="#1BA1E2" Click="btnSearchClaims_Click">
+                        <StackPanel>
+                            <Image Source="{StaticResource ResourceKey=QuickSearchImage}" Width="32" />
+                            <TextBlock Text="Quick Search" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnFullSearch" Background="#1BA1E2" Click="btnInvestigateClaims_Click">
+                        <StackPanel>
+                            <Image Source="{StaticResource ResourceKey=FullSearchImage}" Width="32" />
+                            <TextBlock Text="Full Search" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnImportClaims" Background="#00ABA9" Click="btnImportClaims_Click">
+                        <StackPanel>
+                            <Image Source="{StaticResource ResourceKey=ImportImage}" Width="32" />
+                            <TextBlock Text="Import Claims" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                            <TextBlock Name="txtLastImport" FontWeight="SemiBold" Text="(Last 1/29)" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnAdvanced" Background="#00ABA9" Click="btnAdvanced_Click">
+                        <StackPanel>
+                            <Image Source="{StaticResource ResourceKey=AdvancedImage}" Width="32" />
+                            <TextBlock Text="Advanced" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                        </StackPanel>
+                    </Button>
+
+                </WrapPanel>
+                <WrapPanel>
+                    <DockPanel HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="1024" LastChildFill="True" DockPanel.Dock="Top" Background="White">
+                        <Label Content="Reports" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontSize="20" 
+                               Foreground="Black" FontWeight="SemiBold" Height="44" VerticalContentAlignment="Bottom" Padding="10, 0, 0, 0"/>
+                    </DockPanel>
+
+                    <WrapPanel DockPanel.Dock="Top" Background="White">
+
+
+                        <Button x:Name="btnAgingReportStandard" Background="#8CBF26" Click="btnAgingReportStandard_Click">
+                            <StackPanel>
+                                <Image Source="{StaticResource ResourceKey=ReportImage}" Width="32" />
+                                <TextBlock Text="Claim Priority Report
+                                   (Primary/Secondary)" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                        <Button x:Name="btnAgingReportPredeterm" Background="#8CBF26" Click="btnAgingReportPredeterm_Click">
+                            <StackPanel>
+                                <Image Source="{StaticResource ResourceKey=ReportImage}" Width="32" />
+                                <TextBlock Text="Claim Priority Report
+                                   (Predeterm)" VerticalAlignment="Center" TextWrapping="Wrap" HorizontalAlignment="Center" TextAlignment="Center"/>
+                            </StackPanel>
+                        </Button>
+                    </WrapPanel>
+
+
+                </WrapPanel>
+            </DockPanel>
+            
+<!-- Statistics Coming later  
+            <DockPanel HorizontalAlignment="Left" Height="44" VerticalAlignment="Top" Width="1024" LastChildFill="True" DockPanel.Dock="Top" Background="White">
+                <Label Content="Statistics" VerticalAlignment="Top" HorizontalContentAlignment="Left" FontSize="16" Foreground="Black" FontWeight="SemiBold" Height="44" VerticalContentAlignment="Center" Padding="10, 0, 0, 0"/>
+            </DockPanel>
+
+            <WrapPanel DockPanel.Dock="Top" Background="White">
+
+                <Button Name="btnClaimsPaidYesterday" Click="btnResolveNowClaims_Click" Background="#F09609" HorizontalAlignment="Left">
+                    <StackPanel>
+                        <TextBlock Text="Paid Yesterday" HorizontalAlignment="Center" FontSize="16"/>
+                        <TextBlock Name="txtClaimsPaidYesterday" Text="(30)" HorizontalAlignment="Center" FontWeight="SemiBold" />
+
+                    </StackPanel>
+                </Button>
+
+                
+                <StackPanel>
+                    <Label Content="January Processing Time: 25.1 days" VerticalAlignment="Top" Visibility="Visible" HorizontalContentAlignment="Left" FontSize="16" Foreground="Black" Height="27" Padding="10, 0, 0, 0" Margin="0,0,-164,0" />
+                    <Label Content="December Processing Time: 23.2 days" VerticalAlignment="Top" Visibility="Visible" HorizontalContentAlignment="Left" FontSize="16" Foreground="Black" Height="27" Padding="10, 0, 0, 0" Margin="0,0,-164,0" />
+                </StackPanel>
+
+            </WrapPanel>
+-->
+            <DockPanel VerticalAlignment="Bottom" Height="50" DockPanel.Dock="Bottom" Background="#252525">
+                <DockPanel DockPanel.Dock="Left">
+                    <Button x:Name="btnExit" Margin="0" Background="#339933" VerticalAlignment="Top" HorizontalAlignment="Left" Width="100" Height="50" FontSize="16" Click="btnExit_Click" DockPanel.Dock="Left">
+                        <StackPanel>
+                            <Image Source="{StaticResource SettingsImage}" Width="16" Height="16" />
+                            <TextBlock Text="Exit" />
+                        </StackPanel>
+                    </Button>
+                </DockPanel>
+
+                <DockPanel Height="50" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                    <Button x:Name="btnAbout" Margin="0" Background="#339933" VerticalAlignment="Top" Height="50" HorizontalAlignment="Left" Width="100" FontSize="16" Click="btnAbout_Click" DockPanel.Dock="Right">
+                        <StackPanel>
+                            <Image Source="{StaticResource SettingsImage}" Width="16" Height="16" />
+                            <TextBlock Text="About" />
+                        </StackPanel>
+                    </Button>
+                </DockPanel>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</UserControl>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeploymentManifest xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Files>
+    <DeploymentFile>
+      <FileName>DentalClaimTracker.exe</FileName>
+      <HashValue>58cab3d402f453fc278f3e16b605a6f9</HashValue>
+      <Version>1.0.0.0</Version>
+    </DeploymentFile>
+  </Files>
+</DeploymentManifest>

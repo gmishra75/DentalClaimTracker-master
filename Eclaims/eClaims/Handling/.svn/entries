@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="1"
+   name=""
+   committed-date="2005-07-21T14:36:51.703125Z"
+   url="file:///D:/Brown/brown-svn/NHDG/EClaims/Handling"
+   last-author="Administrator"
+   kind="dir"
+   uuid="ceb31911-ee0d-4a41-a3e1-de2755cd57a9"
+   revision="71"/>
+<entry
+   committed-rev="1"
+   name="ElectronicClaimHandler.cs"
+   text-time="2005-08-31T23:35:19.656250Z"
+   committed-date="2005-07-21T14:36:51.703125Z"
+   checksum="780e235a794cebf40a1449aff0d6fb6e"
+   last-author="Administrator"
+   kind="file"
+   prop-time="2005-08-31T23:35:19.500000Z"/>
+<entry
+   committed-rev="1"
+   name="ManualClaimHandler.cs"
+   text-time="2005-08-31T23:35:19.656250Z"
+   committed-date="2005-07-21T14:36:51.703125Z"
+   checksum="de9da07dd9fc10880b58a7f5ab1ac3a9"
+   last-author="Administrator"
+   kind="file"
+   prop-time="2005-08-31T23:35:19.500000Z"/>
+<entry
+   committed-rev="1"
+   name="ClaimHandler.cs"
+   text-time="2005-08-31T23:35:19.656250Z"
+   committed-date="2005-07-21T14:36:51.703125Z"
+   checksum="e54af63d41e82a1ba7265892f568cabf"
+   last-author="Administrator"
+   kind="file"
+   prop-time="2005-08-31T23:35:19.515625Z"/>
+<entry
+   name="CVS"
+   kind="dir"/>
+</wc-entries>

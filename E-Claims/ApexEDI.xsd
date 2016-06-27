@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="ApexEDI">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="General">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ClaimSeparator" type="xs:string" />
+              <xs:element name="TreatmentsLineStart" type="xs:unsignedByte" />
+              <xs:element name="MaxNumberTreatments" type="xs:unsignedByte" />
+              <xs:element name="CheckboxCharacter" type="xs:unsignedByte" />
+              <xs:element name="EmptyCharacter" type="xs:unsignedByte" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="Fields">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element maxOccurs="unbounded" name="Field">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="Name" type="xs:string" />
+                    <xs:element name="Line" type="xs:unsignedInt" />
+                    <xs:element name="StartColumn" type="xs:unsignedInt" />
+                    <xs:element name="EndColumn" type="xs:unsignedInt" />
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

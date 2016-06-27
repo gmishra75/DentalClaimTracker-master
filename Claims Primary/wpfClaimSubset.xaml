@@ -1,0 +1,131 @@
+﻿<UserControl x:Class="C_DentalClaimTracker.Claims_Primary.wpfClaimSubset"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" Height="768" Width="1024" Background="#FFFFFFFA" Loaded="UserControl_Loaded">
+    <UserControl.Resources>
+        <BitmapImage x:Key="SearchImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\arrow_rotate_clockwise.png" />
+        <BitmapImage x:Key="OpenImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\application_form_edit.png" />
+        <BitmapImage x:Key="PatientImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\status_online.png" />
+        <BitmapImage x:Key="InsuranceImage" UriSource="/Images\fatcow-hosting-icons-900\32x32\building.png" />
+    </UserControl.Resources>
+
+    <Grid RenderTransformOrigin="0.498,0.184" Margin="0,0,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="123*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <DockPanel>
+        
+
+            <Label Content="Claim Subset - Resolve Claims for All Offices" VerticalAlignment="Top" Visibility="Visible" DockPanel.Dock="Top"
+               HorizontalContentAlignment="Left" FontSize="18" Foreground="White" BorderThickness="2" BorderBrush="Black" Background="#FF2196F3" Height="52" VerticalContentAlignment="Center"/>
+            
+            <DockPanel LastChildFill="True" Margin="0,0,0,0" DockPanel.Dock="Top" Height="640">
+                <WrapPanel Width="224" DockPanel.Dock="Left" HorizontalAlignment="Left">
+                    <Border BorderBrush="Black" Background="#F3F5FF" BorderThickness="2" Padding="0" Margin="0,0,0,0">
+                        <StackPanel Margin="0" Height="640">
+                        <Label Name="lblOffices" Content="Claims List" Width="224"  VerticalAlignment="Top" Visibility="Visible" HorizontalContentAlignment="Left" FontSize="16" Foreground="White" FontWeight="SemiBold" BorderThickness="0" BorderBrush="Black" Background="#0D47A1" Height="44" VerticalContentAlignment="Center" Padding="10, 0, 0, 0"/>
+                        <RichTextBox FontSize="14" Background="AliceBlue">
+                            <FlowDocument>
+                                <Paragraph>
+                                    <Bold>Delta Dental</Bold>
+                                    <LineBreak />
+                                    1/1/2016
+                                    <LineBreak />
+                                    Aaron Johnson
+                                </Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
+                        <RichTextBox FontSize="14">
+                            <FlowDocument>
+                                <Paragraph>
+                                    <Bold>Delta Dental</Bold>
+                                    <LineBreak />
+                                    1/1/2016
+                                    <LineBreak />
+                                    Melissa Gibson
+                                </Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
+                        <RichTextBox FontSize="14">
+                            <FlowDocument>
+                                <Paragraph>
+                                    <Bold>Aetna</Bold>
+                                    <LineBreak />
+                                    1/1/2016
+                                    <LineBreak />
+                                    Greg Gibson
+                                </Paragraph>
+                            </FlowDocument>
+                        </RichTextBox>
+                        </StackPanel>
+                    </Border>
+                </WrapPanel>
+
+                <WrapPanel Width="800" DockPanel.Dock="Right" HorizontalAlignment="Right">
+                    <Label  Content="Claims Details" Width="800"  VerticalAlignment="Top" Visibility="Visible" HorizontalContentAlignment="Left" FontSize="16" Foreground="White" FontWeight="SemiBold" BorderThickness="0" BorderBrush="Black" Background="#0D47A1" Height="44" VerticalContentAlignment="Center" Padding="10, 0, 0, 0"/>
+                    <TextBlock Padding="5" TextWrapping="Wrap" FontSize="16" Text="This area would have some more detailed claim information, similar to the current claim form."></TextBlock>
+                    <TextBlock FontSize="16" Text="                                                                                                                            "></TextBlock>
+                    <TextBlock Padding="5" TextWrapping="Wrap" FontSize="16" Text="Below the claim information, we can give them access to the standard claim form here with a 'Make Call' button if they need all the information and are making an actual call."></TextBlock>
+                    <TextBlock FontSize="16" Text="                                                                                                                            "></TextBlock>
+                    <TextBlock Padding="5" TextWrapping="Wrap" FontSize="16" Text="We'd also give them access to some common status/revisit date options to set right here. Things they might find through simple research, like 'Never Received'."></TextBlock>
+                    <TextBlock FontSize="16" Text="                                                                                                                            "></TextBlock>
+                    <TextBlock Padding="5" TextWrapping="Wrap" FontSize="16" Text="The primary benefit here is that you can very quickly classify a claim (almost no load time). We'd train to go down the list and ideally could get the lists empty once a week or so."></TextBlock>
+                    
+                </WrapPanel>
+
+            </DockPanel>
+
+
+            <DockPanel LastChildFill="False" Height="76" VerticalAlignment="Bottom" Background="#FFBBDEFB" HorizontalAlignment="Left" Width="1024" DockPanel.Dock="Bottom">
+                <WrapPanel Width="750" HorizontalAlignment="Stretch" VerticalAlignment="Bottom" Margin="0,0,0,5">
+                    <Button x:Name="btnPrint" Margin="10,10,10,0" VerticalAlignment="Top" Height="35" HorizontalAlignment="Left" Width="77" Background="White" Click="btnPrint_Click">
+                        <StackPanel>
+                            <TextBlock Text="Print" />
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnResend" Margin="10,10,10,0" VerticalAlignment="Top" Height="35" HorizontalAlignment="Left" Width="77" FontSize="16" Background="White" Click="btnResend_Click">
+                        <StackPanel>
+                            <TextBlock Text="Resend" FontSize="12" />
+                        </StackPanel>
+                    </Button>
+                    <Label Content="Override Provider:" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Height="34" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <ComboBox x:Name="cmbChangeProvider" Width="120" Height="28" Margin="0,10,0,0" VerticalContentAlignment="Center" SelectionChanged="cmbChangeProvider_SelectionChanged"/>
+
+                    <Label Content="Set Status To:" HorizontalAlignment="Left" VerticalAlignment="Top" Visibility="Visible" Height="34" VerticalContentAlignment="Center" Margin="0,10,0,0"/>
+                    <ComboBox x:Name="cmbChangeStatus" Width="200" Height="28" Margin="0,10,0,0" VerticalContentAlignment="Center" SelectionChanged="cmbChangeStatus_SelectionChanged"/>
+                </WrapPanel>
+
+                <DockPanel LastChildFill="False" Height="77" VerticalAlignment="Bottom" Background="#FF2196F3" Width="227" HorizontalAlignment="Right" DockPanel.Dock="Right">
+                    <Button x:Name="btnClose" Margin="10,0,0,3" FontSize="16" Click="btnClose_Click" Background="#FFF7F7F7" Height="36" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="84" IsCancel="True">
+                        <StackPanel>
+                            <TextBlock Text="Close" />
+                        </StackPanel>
+                    </Button>
+                    <Button x:Name="btnOpen" Height="70" Width="110" FontSize="16" Margin="0,0,3,3" 
+                            VerticalAlignment="Bottom" HorizontalAlignment="Right" DockPanel.Dock="Right">
+                        <Button.Background>
+                            <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                                <GradientStop Color="#FFE6FAFA" Offset="1"/>
+                                <GradientStop Color="#FFF5FFFF" Offset="0.5"/>
+                                <GradientStop Color="#FFFAFAFA" Offset="0.5"/>
+                            </LinearGradientBrush>
+                        </Button.Background>
+                        <StackPanel>
+
+                            <Image Source="{StaticResource OpenImage}" Width="32" />
+                            <TextBlock Text="Open" />
+                        </StackPanel>
+                    </Button>
+                </DockPanel>
+            </DockPanel>
+
+
+        </DockPanel>
+    </Grid>
+</UserControl>

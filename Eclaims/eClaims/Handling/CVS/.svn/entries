@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wc-entries
+   xmlns="svn:">
+<entry
+   committed-rev="1"
+   name=""
+   committed-date="2005-07-21T14:36:51.703125Z"
+   url="file:///D:/Brown/brown-svn/NHDG/EClaims/Handling/CVS"
+   last-author="Administrator"
+   kind="dir"
+   uuid="ceb31911-ee0d-4a41-a3e1-de2755cd57a9"
+   revision="71"/>
+<entry
+   committed-rev="1"
+   name="Repository"
+   text-time="2005-08-31T23:35:19.593750Z"
+   committed-date="2005-07-21T14:36:51.703125Z"
+   checksum="6c4a1a9571c4b3ce090897920afdf0c0"
+   last-author="Administrator"
+   kind="file"
+   prop-time="2005-08-31T23:35:19.546875Z"/>
+<entry
+   committed-rev="1"
+   name="Root"
+   text-time="2005-08-31T23:35:19.609375Z"
+   committed-date="2005-07-21T14:36:51.703125Z"
+   checksum="f2c35357e846244a573f75891de3d7e6"
+   last-author="Administrator"
+   kind="file"
+   prop-time="2005-08-31T23:35:19.562500Z"/>
+<entry
+   committed-rev="1"
+   name="Entries.Old"
+   text-time="2005-08-31T23:35:19.609375Z"
+   committed-date="2005-07-21T14:36:51.703125Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="Administrator"
+   kind="file"
+   prop-time="2005-08-31T23:35:19.562500Z"/>
+<entry
+   committed-rev="1"
+   name="Entries.Extra.Old"
+   text-time="2005-08-31T23:35:19.609375Z"
+   committed-date="2005-07-21T14:36:51.703125Z"
+   checksum="d41d8cd98f00b204e9800998ecf8427e"
+   last-author="Administrator"
+   kind="file"
+   prop-time="2005-08-31T23:35:19.578125Z"/>
+<entry
+   committed-rev="1"
+   name="Entries"
+   text-time="2005-08-31T23:35:19.625000Z"
+   committed-date="2005-07-21T14:36:51.703125Z"
+   checksum="403ac6a587c4578935bdbc27b9492a28"
+   last-author="Administrator"
+   kind="file"
+   prop-time="2005-08-31T23:35:19.578125Z"/>
+<entry
+   committed-rev="1"
+   name="Entries.Extra"
+   text-time="2005-08-31T23:35:19.625000Z"
+   committed-date="2005-07-21T14:36:51.703125Z"
+   checksum="c7e10aff9cc6da42281580a0b6f04064"
+   last-author="Administrator"
+   kind="file"
+   prop-time="2005-08-31T23:35:19.593750Z"/>
+</wc-entries>
